@@ -49,6 +49,8 @@ from Crypto.Cipher import AES
 from Crypto.Util.Padding import unpad
 from base64 import b64encode, b64decode
 
+token = "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJpZCI6OTIzNDIwMDUsIm9yZ0lkIjo1NDI0MjEsInR5cGUiOjEsIm1vYmlsZSI6IjkxODI5ODczMDAzNiIsIm5hbWUiOiJTdWRoYW5zaHUgSmhhIiwiZW1haWwiOiJzdWRoYW5zaHVqaGExNTFAZ21haWwuY29tIiwiaXNJbnRlcm5hdGlvbmFsIjowLCJkZWZhdWx0TGFuZ3VhZ2UiOiJFTiIsImNvdW50cnlDb2RlIjoiSU4iLCJjb3VudHJ5SVNPIjoiOTEiLCJ0aW1lem9uZSI6IkdNVCs1OjMwIiwiaXNEaXkiOnRydWUsIm9yZ0NvZGUiOiJ1Y3Z2YW8iLCJpc0RpeVN1YmFkbWluIjowLCJmaW5nZXJwcmludElkIjoiNjM0MzRmMzI3ZTIxNDNiMGNkMzcyMDkxOTlhMzE0OWIiLCJpYXQiOjE3MDQ3OTg5NTl9.cmTBtFISAUpMgkDL7nXXkiRVqAUapuf_C50ZS2AzEDqClQnUsA7C9e-GBNcNu3CKM1LikvkpA3CdO-dlO_o-aA"
+
 @bot.on_message(filters.command(["cpd"])&  ~filters.edited)
 async def account_login(bot: Client, m: Message):
     editable = await m.reply_text("Send txt file**")
